@@ -39,6 +39,9 @@ SolutionStream.prototype._transform = function ( problem, encoding, processed ) 
     if( null===problem || problem.length !==2 ){
       areAnagramme = false;
     }
+    if( problem[0].length === problem[1].length ){
+      areAnagramme = false;
+    }
     if( problem[0].split('').sort().join('').localeCompare( problem[1].split('').sort().join('') ) === 0 ){
       areAnagramme = true;
     }
